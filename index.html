@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
             --bg: #0B0F17;
@@ -495,10 +495,10 @@
                 Software professional specializing in Java Spring Boot REST APIs, Python background microservices, automated/manual API testing using Postman, and PostgreSQL database verification. Currently working as an MES Support Engineer at VVDN Technologies.
             </p>
             <div class="btn-group">
-                <a class="btn btn-primary" href="https://github.com/gowtham-m-java" target="_blank" rel="noopener">
+                <a class="btn btn-primary" href="https://github.com/gowtham20031511" target="_blank" rel="noopener">
                     <i class="fa-brands fa-github"></i> GitHub
                 </a>
-                <a class="btn btn-outline" href="https://linkedin.com/in/gowtham-m-java" target="_blank" rel="noopener">
+                <a class="btn btn-outline" href="https://linkedin.com/in/gowtham20031511" target="_blank" rel="noopener">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn
                 </a>
                 <!-- Custom simulated downloadable resume trigger -->
@@ -609,7 +609,7 @@
                         <span class="tag">MockMvc</span>
                     </div>
                 </div>
-                <a href="https://github.com/gowtham-m-java/employee-management-api" class="btn btn-outline" target="_blank" rel="noopener">
+                <a href="https://github.com/gowtham20031511/employee-management-api" class="btn btn-outline" target="_blank" rel="noopener">
                     <i class="fa-brands fa-github"></i> Repository
                 </a>
             </div>
@@ -625,19 +625,19 @@
 
             <p><strong>Instructions to Run:</strong></p>
             <div class="code-block"># 1. Clone the repository
-git clone https://github.com/gowtham-m-java/employee-management-api.git
-cd employee-management-api
+                git clone https://github.com/gowtham20031511/employee-management-api.git
+                cd employee-management-api
 
-# 2. Configure PostgreSQL credentials in src/main/resources/application.properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/employeedb
-spring.datasource.username=postgres
-spring.datasource.password=yourpassword
+                # 2. Configure PostgreSQL credentials in src/main/resources/application.properties
+                spring.datasource.url=jdbc:postgresql://localhost:5432/employeedb
+                spring.datasource.username=postgres
+                spring.datasource.password=yourpassword
 
-# 3. Build & Run Application via Maven
-mvn clean install
-mvn spring-boot:run
+                # 3. Build & Run Application via Maven
+                mvn clean install
+                mvn spring-boot:run
 
-# API Endpoint: http://localhost:8080/api/v1/employees</div>
+                # API Endpoint: http://localhost:8080/api/v1/employees</div>
         </article>
 
         <!-- Project 2 -->
@@ -653,7 +653,7 @@ mvn spring-boot:run
                         <span class="tag">Postman Collection</span>
                     </div>
                 </div>
-                <a href="https://github.com/gowtham-m-java/stock-market-dashboard" class="btn btn-outline" target="_blank" rel="noopener">
+                <a href="https://github.com/gowtham20031511/stock-market-dashboard" class="btn btn-outline" target="_blank" rel="noopener">
                     <i class="fa-brands fa-github"></i> Repository
                 </a>
             </div>
@@ -668,16 +668,16 @@ mvn spring-boot:run
 
             <p><strong>Instructions to Run:</strong></p>
             <div class="code-block"># 1. Clone and Navigate
-git clone https://github.com/gowtham-m-java/stock-market-dashboard.git
-cd stock-market-dashboard
+                git clone https://github.com/gowtham20031511/stock-market-dashboard.git
+                cd stock-market-dashboard
 
-# 2. Run Database Migrations / Schema Script
-psql -U postgres -d stockdb -f schema.sql
+                # 2. Run Database Migrations / Schema Script
+                psql -U postgres -d stockdb -f schema.sql
 
-# 3. Start Spring Boot Application
-mvn spring-boot:run
+                # 3. Start Spring Boot Application
+                mvn spring-boot:run
 
-# Test via Postman at http://localhost:8080/api/v1/stocks/AAPL</div>
+                # Test via Postman at http://localhost:8080/api/v1/stocks/AAPL</div>
         </article>
     </section>
 
@@ -693,43 +693,43 @@ mvn spring-boot:run
             <div class="table-responsive">
                 <table>
                     <thead>
-                        <tr>
-                            <th>TC ID</th>
-                            <th>Test Scenario</th>
-                            <th>Test Steps</th>
-                            <th>Expected Result</th>
-                            <th>Status</th>
-                        </tr>
+                    <tr>
+                        <th>TC ID</th>
+                        <th>Test Scenario</th>
+                        <th>Test Steps</th>
+                        <th>Expected Result</th>
+                        <th>Status</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>TC_AUTH_01</td>
-                            <td>Valid User Login</td>
-                            <td>1. POST /api/login with valid credentials</td>
-                            <td>HTTP 200 OK, JWT Token returned</td>
-                            <td><span class="badge badge-pass">PASS</span></td>
-                        </tr>
-                        <tr>
-                            <td>TC_AUTH_02</td>
-                            <td>Login Incorrect Password</td>
-                            <td>1. POST /api/login with invalid password</td>
-                            <td>HTTP 401 Unauthorized with error detail</td>
-                            <td><span class="badge badge-pass">PASS</span></td>
-                        </tr>
-                        <tr>
-                            <td>TC_AUTH_03</td>
-                            <td>SQL Injection in Email Field</td>
-                            <td>1. Input `' OR '1'='1` in email field</td>
-                            <td>HTTP 400 Bad Request / Sanitization block</td>
-                            <td><span class="badge badge-pass">PASS</span></td>
-                        </tr>
-                        <tr>
-                            <td>TC_EMP_04</td>
-                            <td>Create Employee Negative Salary</td>
-                            <td>1. POST /api/employees with salary = -5000</td>
-                            <td>HTTP 400 Bad Request "Salary must be positive"</td>
-                            <td><span class="badge badge-pass">PASS</span></td>
-                        </tr>
+                    <tr>
+                        <td>TC_AUTH_01</td>
+                        <td>Valid User Login</td>
+                        <td>1. POST /api/login with valid credentials</td>
+                        <td>HTTP 200 OK, JWT Token returned</td>
+                        <td><span class="badge badge-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                        <td>TC_AUTH_02</td>
+                        <td>Login Incorrect Password</td>
+                        <td>1. POST /api/login with invalid password</td>
+                        <td>HTTP 401 Unauthorized with error detail</td>
+                        <td><span class="badge badge-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                        <td>TC_AUTH_03</td>
+                        <td>SQL Injection in Email Field</td>
+                        <td>1. Input `' OR '1'='1` in email field</td>
+                        <td>HTTP 400 Bad Request / Sanitization block</td>
+                        <td><span class="badge badge-pass">PASS</span></td>
+                    </tr>
+                    <tr>
+                        <td>TC_EMP_04</td>
+                        <td>Create Employee Negative Salary</td>
+                        <td>1. POST /api/employees with salary = -5000</td>
+                        <td>HTTP 400 Bad Request "Salary must be positive"</td>
+                        <td><span class="badge badge-pass">PASS</span></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -752,10 +752,10 @@ mvn spring-boot:run
                     <li><strong>Backend Verification:</strong> Executed SQL queries in PostgreSQL to confirm that API actions (CREATE, UPDATE, DELETE) altered table states accurately.</li>
                     <li><strong>Constraints & JOINs:</strong> Verified NOT NULL, UNIQUE, and FOREIGN KEY constraints alongside relational table JOINs.</li>
                     <li><strong>Sample SQL Query:</strong>
-                        <div class="code-block" style="margin-top:0.5rem; font-size:0.78rem;">SELECT e.id, e.name, d.department_name 
-FROM employees e 
-JOIN departments d ON e.dept_id = d.id 
-WHERE e.email = 'test@vvdn.com';</div>
+                        <div class="code-block" style="margin-top:0.5rem; font-size:0.78rem;">SELECT e.id, e.name, d.department_name
+                            FROM employees e
+                            JOIN departments d ON e.dept_id = d.id
+                            WHERE e.email = 'test@vvdn.com';</div>
                     </li>
                 </ul>
             </div>
@@ -765,38 +765,38 @@ WHERE e.email = 'test@vvdn.com';</div>
         <div class="card" style="margin-top: 1.5rem; margin-bottom: 0;">
             <h3>D. Defect Bug Report Example</h3>
             <p>Example of a structured defect report logged during API execution:</p>
-            
+
             <div class="table-responsive">
                 <table>
                     <tbody>
-                        <tr>
-                            <th style="width:20%;">Defect ID</th>
-                            <td>BUG-2026-089</td>
-                            <th style="width:20%;">Severity / Priority</th>
-                            <td><span class="badge badge-high">High</span> / High</td>
-                        </tr>
-                        <tr>
-                            <th>Title</th>
-                            <td colspan="3">POST /api/v1/employees accepts null value for mandatory 'dept_id'</td>
-                        </tr>
-                        <tr>
-                            <th>Environment</th>
-                            <td colspan="3">Staging Environment (PostgreSQL 15, Spring Boot 3.3)</td>
-                        </tr>
-                        <tr>
-                            <th>Steps to Reproduce</th>
-                            <td colspan="3">
-                                1. Dispatch POST request to `/api/v1/employees` with payload: <code>{"name":"Rahul", "salary":50000, "dept_id": null}</code><br>
-                                2. Observe HTTP 200 OK response and database row created with NULL department.
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Expected vs Actual</th>
-                            <td colspan="3">
-                                <strong>Expected:</strong> API should respond with HTTP 400 Bad Request due to missing foreign key.<br>
-                                <strong>Actual:</strong> System accepts null value, causing NullPointerException in downstream payroll calculations.
-                            </td>
-                        </tr>
+                    <tr>
+                        <th style="width:20%;">Defect ID</th>
+                        <td>BUG-2026-089</td>
+                        <th style="width:20%;">Severity / Priority</th>
+                        <td><span class="badge badge-high">High</span> / High</td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td colspan="3">POST /api/v1/employees accepts null value for mandatory 'dept_id'</td>
+                    </tr>
+                    <tr>
+                        <th>Environment</th>
+                        <td colspan="3">Staging Environment (PostgreSQL 15, Spring Boot 3.3)</td>
+                    </tr>
+                    <tr>
+                        <th>Steps to Reproduce</th>
+                        <td colspan="3">
+                            1. Dispatch POST request to `/api/v1/employees` with payload: <code>{"name":"Rahul", "salary":50000, "dept_id": null}</code><br>
+                            2. Observe HTTP 200 OK response and database row created with NULL department.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Expected vs Actual</th>
+                        <td colspan="3">
+                            <strong>Expected:</strong> API should respond with HTTP 400 Bad Request due to missing foreign key.<br>
+                            <strong>Actual:</strong> System accepts null value, causing NullPointerException in downstream payroll calculations.
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -863,19 +863,16 @@ WHERE e.email = 'test@vvdn.com';</div>
                 I am actively seeking opportunities in Java Backend Development and Software Quality Assurance (QA).
             </p>
             <div class="btn-group" style="justify-content: center;">
-                <a class="btn btn-primary" href="mailto:gowtham-m-java@gmail.com">
+                <a class="btn btn-primary" href="mailto:gowthamm811@gmail.com">
                     <i class="fa-solid fa-envelope"></i> Email Gowtham
                 </a>
-                <a class="btn btn-outline" href="https://github.com/gowtham-m-java" target="_blank" rel="noopener">
+                <a class="btn btn-outline" href="https://github.com/gowtham20031511" target="_blank" rel="noopener">
                     <i class="fa-brands fa-github"></i> GitHub Profile
                 </a>
-                <a class="btn btn-outline" href="https://linkedin.com/in/gowtham-m-java" target="_blank" rel="noopener">
+                <a class="btn btn-outline" href="https://www.linkedin.com/in/gowtham-m-java" target="_blank" rel="noopener">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
                 </a>
             </div>
-        </div>
-    </section>
-
 </main>
 
 <footer style="text-align: center; color: var(--muted); padding: 2rem 1rem; border-top: 1px solid var(--line); font-size: 0.9rem;">
